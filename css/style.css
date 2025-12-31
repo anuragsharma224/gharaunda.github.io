@@ -1245,22 +1245,40 @@ ul {
 /* ===================================
    Responsive Design
    =================================== */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .mobile-menu-toggle {
         display: flex;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .nav-wrapper {
+        justify-content: space-between;
+    }
+
+    .ngo-name {
+        position: static;
+        transform: none;
+        font-size: 1.5rem;
+        flex: 1;
+        text-align: center;
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 0;
         left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
         background-color: white;
         flex-direction: column;
-        padding: 2rem;
+        padding: 80px 1.5rem 2rem;
         transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
+        margin-right: 0;
+        z-index: 1000;
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -1270,32 +1288,110 @@ ul {
     .nav-menu a {
         width: 100%;
         padding: 1rem;
-        text-align: center;
+        text-align: left;
         border-bottom: 1px solid var(--border-color);
     }
 
+    .nav-menu a.btn-donate {
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
     .hero-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
     
     .hero-focus {
+        font-size: 0.85rem;
+    }
+
+    .hero-stats {
+        gap: 1rem;
+    }
+
+    .stat-box {
+        padding: 0.75rem 1rem;
+    }
+
+    .stat-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .stat-box p {
+        font-size: 0.85rem;
+    }
+
+    .hero-note {
         font-size: 0.9rem;
+        padding: 0.5rem 1rem;
     }
 
     .section {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .founder-image-wrapper {
+        position: static;
+    }
+
+    .founder-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .founder-text h3 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .qualifications {
+        padding: 1rem;
+    }
+
+    .qualification-item strong {
+        font-size: 0.95rem;
     }
 
     .mission-grid {
@@ -1306,21 +1402,75 @@ ul {
         grid-template-columns: 1fr;
     }
 
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .gallery-grid-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .video-thumbnail,
+    .video-placeholder {
+        height: 200px;
     }
 
     .contact-content-simple {
         padding: 0 1rem;
     }
 
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .contact-icon {
+        margin: 0 auto;
+    }
+
+    .donate-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .donate-details {
+        padding: 1.5rem 1rem;
+    }
+
+    .donate-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .bank-details strong,
+    .upi-details strong,
+    .other-details strong {
+        min-width: auto;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .qr-code {
+        max-width: 150px;
+    }
+
     .hero-buttons {
         flex-direction: column;
+        gap: 0.75rem;
     }
 
     .btn {
         width: 100%;
         text-align: center;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        height: 60px;
     }
 
     .gallery-nav {
@@ -1338,16 +1488,34 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .ngo-name {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
     .hero-title {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .stat-box {
+        width: 100%;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
-    .team-grid {
-        grid-template-columns: 1fr;
+    .founder-image {
+        width: 150px;
+        height: 150px;
     }
 
     .donate-options {

@@ -220,28 +220,24 @@ document.getElementById('galleryModal').addEventListener('click', (e) => {
 });
 
 // ===================================
-// Contact Form Handling
+// Contact Form Handling (if form exists)
 // ===================================
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    
-    // Show success message (you can customize this)
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
-    
-    // Here you would typically send the form data to a backend service
-    // For a static site, you might want to use services like:
-    // - Formspree (https://formspree.io/)
-    // - Netlify Forms
-    // - EmailJS (https://www.emailjs.com/)
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        
+        // Show success message (you can customize this)
+        alert('Thank you for your message! We will get back to you soon.');
+        
+        // Reset form
+        contactForm.reset();
+    });
+}
 
 // ===================================
 // Scroll Animations

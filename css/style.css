@@ -152,7 +152,7 @@ ul {
 }
 
 .logo-img {
-    height: 80px;
+    height: 100px;
     width: auto;
     object-fit: contain;
 }
@@ -239,16 +239,14 @@ ul {
    =================================== */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     text-align: center;
     color: white;
-    overflow: hidden;
-    padding-top: 80px;
+    padding: 150px 20px 50px;
 }
 
 .hero-overlay {
@@ -264,7 +262,7 @@ ul {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 90%;
+    max-width: 800px;
     padding: 0 20px;
     animation: fadeInUp 1s ease;
     margin: 0 auto;
@@ -272,33 +270,31 @@ ul {
 }
 
 .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-    max-width: 100%;
-    padding: 0 10px;
-    word-break: break-word;
-    white-space: normal;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .hero-subtitle {
-    font-size: 1.05rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     opacity: 0.95;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.8;
 }
 
 .hero-focus {
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
     opacity: 0.9;
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
     font-style: italic;
+    line-height: 1.8;
 }
 
 .hero-stats-title {
@@ -542,12 +538,12 @@ ul {
 
 .qualification-item em {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .founder-quote {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(16, 185, 129, 0.1));
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 10px;
     border-left: 4px solid var(--secondary-color);
     margin: 2rem 0;
@@ -556,8 +552,17 @@ ul {
 
 .founder-quote p {
     margin-bottom: 0;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--dark-color);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.quote-attribution {
+    margin-top: 1rem !important;
+    font-weight: 600;
+    font-style: normal !important;
+    color: var(--primary-color) !important;
 }
 
 .founder-conclusion {
@@ -699,6 +704,29 @@ ul {
 .work-note ul li {
     padding: 0.5rem 0;
     font-size: 1.05rem;
+}
+
+.donation-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.donation-list li:last-child {
+    border-bottom: none;
+}
+
+.donation-list li strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.donation-list li span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
 }
 
 .about-text .highlight {
@@ -1071,7 +1099,7 @@ ul {
 }
 
 .donate-note {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.8;
 }
 
@@ -1288,10 +1316,10 @@ ul {
 
     .nav-menu a {
         width: 100%;
-        padding: 1.25rem 1rem;
+        padding: 0.85rem 1rem;
         text-align: center;
         border-bottom: 1px solid var(--border-color);
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         display: block;
         text-decoration: none;
     }
@@ -1308,18 +1336,18 @@ ul {
 
     .nav-menu li {
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
     }
 
     .nav-menu a.btn-donate {
-        padding: 1rem 2rem;
+        padding: 0.85rem 1.5rem;
         text-align: center;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         border-bottom: none;
     }
 
     .logo-img {
-        height: 50px;
+        height: 65px;
     }
 }
 
@@ -1332,20 +1360,20 @@ ul {
 
     .hero-content {
         max-width: 100%;
-        padding: 0 15px;
+        padding: 0 20px;
         margin-top: 20px;
     }
 
     .hero-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
     }
     
     .hero-focus {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .hero-stats {
@@ -1361,11 +1389,11 @@ ul {
     }
 
     .stat-box p {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 
     .hero-note {
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding: 0.5rem 1rem;
     }
 
@@ -1383,7 +1411,7 @@ ul {
     }
 
     .section-description {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .title-underline {
@@ -1424,6 +1452,10 @@ ul {
     }
 
     .qualification-item strong {
+        font-size: 1rem;
+    }
+    
+    .qualification-item em {
         font-size: 0.95rem;
     }
 
@@ -1526,11 +1558,11 @@ ul {
     }
 
     .logo-img {
-        height: 40px;
+        height: 50px;
     }
 
     .hero-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .hero-stats {
